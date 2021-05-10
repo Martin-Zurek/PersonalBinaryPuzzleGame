@@ -14,16 +14,30 @@
         font-family: "Trebuchet MS", sans-serif;
         font-size: 50px;
         text-align: center;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 2px white;
       }
       h2 {
         font-family: "Trebuchet MS", sans-serif;
         font-size: 30px;
         text-align: center;
       }
-      p {
-        font-family: "Trebuchet MS", sans-serif;
+      button {
+        background-color: rgba(0, 100, 0);
+        border: none;
+        color: white;
+        padding: 15px 30px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
         font-size: 15px;
-        text-align: left;
+        transition-duration: 0.2s;
+      }
+      button:hover {
+        background-color: rgba(0, 150, 0);
+      }
+      button:active {
+        transform: translateY(5px);
       }
     </style>
   </head>
@@ -31,17 +45,7 @@
     <h1>Binary Puzzle Game</h1>
     <h2>Index</h2>
     <br />
-    <img src="images/test.jpg" alt="Puzzle Icon" width="100" height="100" />
+    <button onclick="document.location='game.html'">Click To Play!</button>
     <br />
-    <p>
-      The repository for this site is at:
-      <a href="link here">https://github.com/bwattle/BinaryPuzzle</a>
-    </p>
-    <p>Links to versions and descriptions are below:</p>
-    <p>
-      <a href="game.html" target="_blank">Game </a> - Create a function to
-      "DisplayGrid" after values have been changed. This will be called from
-      every button.
-    </p>
   </body>
 </html>
