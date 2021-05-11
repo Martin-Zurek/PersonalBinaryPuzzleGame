@@ -23,18 +23,19 @@
         text-align: center;
       }
       button {
-        background-color: rgba(0, 100, 0);
+        background-color: rgba(0, 150, 0);
+        font-size: 15px;
+        text-align: center;
         border: none;
         color: white;
         padding: 15px 30px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 15px;
         transition-duration: 0.2s;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
       }
       button:hover {
-        background-color: rgba(0, 150, 0);
+        background-color: rgba(0, 200, 0);
       }
       button:active {
         transform: translateY(5px);
@@ -45,7 +46,9 @@
     <h1>Binary Puzzle Game</h1>
     <h2>Index</h2>
     <br />
-    <button onclick="document.location='game.html'">Click To Play!</button>
+    <button onclick="document.location='game.html'">Play</button>
+    <br />
+    <button onclick="document.location='tutorial.html'">Tutorial</button>
     <br />
   </body>
 </html>
