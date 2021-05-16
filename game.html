@@ -31,7 +31,7 @@
         letter-spacing: 1px;
         text-shadow: 1.5px 1.5px 1.5px white;
       }
-      button {
+      input {
         background-color: rgba(0, 150, 0);
         font-size: 15px;
         text-align: center;
@@ -44,10 +44,10 @@
         margin-left: auto;
         margin-right: auto;
       }
-      button:hover {
+      input:hover {
         background-color: rgba(0, 200, 0);
       }
-      button:active {
+      input:active {
         transform: translateY(5px);
       }
       * {
@@ -79,18 +79,6 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
-      }
-
-      ddinput {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        resize: none;
-        width: 15%;
-        height: 10%;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 17.5px;
-        font-weight: bold;
       }
     </style>
     <script type="text/javascript">
@@ -678,7 +666,14 @@
       <h1>Binary Puzzle Game</h1>
       <h2>Game Page</h2>
       <br />
-      <h3>Choose which game should be solved!</h3>
+      <input
+        id="Return"
+        type="Button"
+        value="Return"
+        onclick="document.location='index.html'"
+      />
+      <br />
+      <h3>Read the TUTORIAL before continuing!</h3>
       <select id="cboPuzNo" onchange="loadGrid(eval(value))" name="D1">
         <option value="G01">Game 1</option>
         <option value="G02">Game 2</option>
@@ -698,18 +693,18 @@
       <br />
       <input
         type="button"
-        value="--- Solve repeat ---"
+        value="Solve Repeat"
         onclick="BinaryPuzzleSolver()"
       />
-      <input type="button" value="--- Solve once ---" onclick="SolvePuzzle()" />
+      <input type="button" value="Solve Once" onclick="SolvePuzzle()" />
       <input onclick="SolveNumberPairs()" type="button" value="Pairs" />
       <input type="button" value="Trios" onclick="SolveNumberTrios()" />
       <input type="button" value="Complete" onclick="CompleteRowsCols()" />
       <input type="button" value="RowPairs" onclick="SolveRowPairs()" />
       <input type="button" value="ColPairs" onclick="SolveColPairs()" />
       <br />
-      <br>
-      <br>
+      <br />
+      <br />
       <table class="gameboard">
         <tr>
           <td>
