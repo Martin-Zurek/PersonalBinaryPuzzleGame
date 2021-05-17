@@ -694,182 +694,181 @@
     </script>
   </head>
   <body onload="loadGrid(G01)">
-      <h1>Binary Puzzle Game</h1>
-      <img src="images/logo.png" />
-      <h2>Game Page</h2>
-      <br>
-      <h3>Pick A Game</h3>
-      <br>
-      <select name="D1" id="dropdown" onchange="loadGrid(eval(value))">
-        <option value="G01">Game 1</option>
-        <option value="G02">Game 2</option>
-        <option value="G03">Game 3</option>
-        <option value="G04">Game 4</option>
-        <option value="G05">Game 5</option>
-        <option value="G06">Game 6</option>
-        <option value="G07">Game 7</option>
-        <option value="G08">Game 8</option>
-        <option value="G09">Game 9</option>
-        <option value="G10">Game 10</option>
-        <option value="G11">Game 11</option>
-        <option value="G12">Game 12</option>
-        <option value="G13">Game 13</option>
-        <option value="GT">Testing Game</option>
-      </select>
-      <br />
-      <h2>Pick A Button</h2>
-      <br>
-      <input
-        type="button"
-        value="Solve Repeat"
-        onclick="BinaryPuzzleSolver()"
-      />
-      <input type="button" value="Solve Once" onclick="SolvePuzzle()" />
-      <input onclick="SolveNumberPairs()" type="button" value="Pairs" />
-      <input type="button" value="Trios" onclick="SolveNumberTrios()" />
-      <input type="button" value="Complete" onclick="CompleteRowsCols()" />
-      <input type="button" value="RowPairs" onclick="SolveRowPairs()" />
-      <input type="button" value="ColPairs" onclick="SolveColPairs()" />
-      <br />
-      <br />
-      <br />
-      <table class="gameboard">
-        <tr>
-          <td>
-            <input id="B11" type="text" class="gameboard" />
-          </td>
-          <td>
-            <input id="B21" type="text" class="gameboard" />
-          </td>
-          <td>
-            <input id="B31" type="text" class="gameboard" />
-          </td>
-          <td>
-            <input id="B41" type="text" class="gameboard" />
-          </td>
-          <td>
-            <input id="B51" type="text" class="gameboard" />
-          </td>
-          <td>
-            <input id="B61" type="text" class="gameboard" />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input id="B12" type="text" class="gameboard" />
-          </td>
-          <td>
-            <input id="B22" type="text" class="gameboard" />
-          </td>
-          <td>
-            <input id="B32" type="text" class="gameboard" />
-          </td>
-          <td>
-            <input id="B42" type="text" class="gameboard" />
-          </td>
-          <td>
-            <input id="B52" type="text" class="gameboard" />
-          </td>
-          <td>
-            <input id="B62" type="text" class="gameboard" />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input id="B13" type="text" class="gameboard" />
-          </td>
-          <td>
-            <input id="B23" type="text" class="gameboard" />
-          </td>
-          <td>
-            <input id="B33" type="text" class="gameboard" />
-          </td>
-          <td>
-            <input id="B43" type="text" class="gameboard" />
-          </td>
-          <td>
-            <input id="B53" type="text" class="gameboard" />
-          </td>
-          <td>
-            <input id="B63" type="text" class="gameboard" />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input id="B14" type="text" class="gameboard" />
-          </td>
-          <td>
-            <input id="B24" type="text" class="gameboard" />
-          </td>
-          <td>
-            <input id="B34" type="text" class="gameboard" />
-          </td>
-          <td>
-            <input id="B44" type="text" class="gameboard" />
-          </td>
-          <td>
-            <input id="B54" type="text" class="gameboard" />
-          </td>
-          <td>
-            <input id="B64" type="text" class="gameboard" />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input id="B15" type="text" class="gameboard" />
-          </td>
-          <td>
-            <input id="B25" type="text" class="gameboard" />
-          </td>
-          <td>
-            <input id="B35" type="text" class="gameboard" />
-          </td>
-          <td>
-            <input id="B45" type="text" class="gameboard" />
-          </td>
-          <td>
-            <input id="B55" type="text" class="gameboard" />
-          </td>
-          <td>
-            <input id="B65" type="text" class="gameboard" />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input id="B16" type="text" class="gameboard" />
-          </td>
-          <td>
-            <input id="B26" type="text" class="gameboard" />
-          </td>
-          <td>
-            <input id="B36" type="text" class="gameboard" />
-          </td>
-          <td>
-            <input id="B46" type="text" class="gameboard" />
-          </td>
-          <td>
-            <input id="B56" type="text" class="gameboard" />
-          </td>
-          <td>
-            <input id="B66" type="text" class="gameboard" />
-          </td>
-        </tr>
-      </table>
-      <br />
-      <h2>Grid Test View</h2>
-      <h3>No Indexes - 1D Array</h3>
-      <textarea id="arrayView1D" cols="30" rows="7"></textarea>
-      <br />
-      <h2>Grid Test View</h2>
-      <h3>Rows - 2D Array</h3>
-      <textarea id="arrayView2D" cols="30" rows="7" name="S1"></textarea>
-      <br />
-      <h2>Grid Test View</h2>
-      <h3>2 Indexes - Element</h3>
-      <textarea id="arrayViewCell" cols="30" rows="2"></textarea>
-      <br />
-      <br />
-      <button onclick="document.location='index.html'">Return</button>
-      <br>
+    <h1>Binary Puzzle Game</h1>
+    <h2>Game Page</h2>
+    <br />
+    <h2>Pick A Game</h2>
+    <br />
+    <select name="D1" id="dropdown" onchange="loadGrid(eval(value))">
+      <option value="G01">Game 1</option>
+      <option value="G02">Game 2</option>
+      <option value="G03">Game 3</option>
+      <option value="G04">Game 4</option>
+      <option value="G05">Game 5</option>
+      <option value="G06">Game 6</option>
+      <option value="G07">Game 7</option>
+      <option value="G08">Game 8</option>
+      <option value="G09">Game 9</option>
+      <option value="G10">Game 10</option>
+      <option value="G11">Game 11</option>
+      <option value="G12">Game 12</option>
+      <option value="G13">Game 13</option>
+      <option value="GT">Testing Game</option>
+    </select>
+    <br />
+    <h2>Pick A Button</h2>
+    <br />
+    <input type="button" value="Solve Repeat" onclick="BinaryPuzzleSolver()" />
+    <input type="button" value="Solve Once" onclick="SolvePuzzle()" />
+    <input onclick="SolveNumberPairs()" type="button" value="Pairs" />
+    <input type="button" value="Trios" onclick="SolveNumberTrios()" />
+    <input type="button" value="Complete" onclick="CompleteRowsCols()" />
+    <input type="button" value="RowPairs" onclick="SolveRowPairs()" />
+    <input type="button" value="ColPairs" onclick="SolveColPairs()" />
+    <br />
+    <br />
+    <br />
+    <table class="gameboard">
+      <tr>
+        <td>
+          <input id="B11" type="text" class="gameboard" />
+        </td>
+        <td>
+          <input id="B21" type="text" class="gameboard" />
+        </td>
+        <td>
+          <input id="B31" type="text" class="gameboard" />
+        </td>
+        <td>
+          <input id="B41" type="text" class="gameboard" />
+        </td>
+        <td>
+          <input id="B51" type="text" class="gameboard" />
+        </td>
+        <td>
+          <input id="B61" type="text" class="gameboard" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input id="B12" type="text" class="gameboard" />
+        </td>
+        <td>
+          <input id="B22" type="text" class="gameboard" />
+        </td>
+        <td>
+          <input id="B32" type="text" class="gameboard" />
+        </td>
+        <td>
+          <input id="B42" type="text" class="gameboard" />
+        </td>
+        <td>
+          <input id="B52" type="text" class="gameboard" />
+        </td>
+        <td>
+          <input id="B62" type="text" class="gameboard" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input id="B13" type="text" class="gameboard" />
+        </td>
+        <td>
+          <input id="B23" type="text" class="gameboard" />
+        </td>
+        <td>
+          <input id="B33" type="text" class="gameboard" />
+        </td>
+        <td>
+          <input id="B43" type="text" class="gameboard" />
+        </td>
+        <td>
+          <input id="B53" type="text" class="gameboard" />
+        </td>
+        <td>
+          <input id="B63" type="text" class="gameboard" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input id="B14" type="text" class="gameboard" />
+        </td>
+        <td>
+          <input id="B24" type="text" class="gameboard" />
+        </td>
+        <td>
+          <input id="B34" type="text" class="gameboard" />
+        </td>
+        <td>
+          <input id="B44" type="text" class="gameboard" />
+        </td>
+        <td>
+          <input id="B54" type="text" class="gameboard" />
+        </td>
+        <td>
+          <input id="B64" type="text" class="gameboard" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input id="B15" type="text" class="gameboard" />
+        </td>
+        <td>
+          <input id="B25" type="text" class="gameboard" />
+        </td>
+        <td>
+          <input id="B35" type="text" class="gameboard" />
+        </td>
+        <td>
+          <input id="B45" type="text" class="gameboard" />
+        </td>
+        <td>
+          <input id="B55" type="text" class="gameboard" />
+        </td>
+        <td>
+          <input id="B65" type="text" class="gameboard" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input id="B16" type="text" class="gameboard" />
+        </td>
+        <td>
+          <input id="B26" type="text" class="gameboard" />
+        </td>
+        <td>
+          <input id="B36" type="text" class="gameboard" />
+        </td>
+        <td>
+          <input id="B46" type="text" class="gameboard" />
+        </td>
+        <td>
+          <input id="B56" type="text" class="gameboard" />
+        </td>
+        <td>
+          <input id="B66" type="text" class="gameboard" />
+        </td>
+      </tr>
+    </table>
+    <br />
+    <h2>Grid Test View</h2>
+    <h3>No Indexes - 1D Array</h3>
+    <textarea id="arrayView1D" cols="30" rows="7"></textarea>
+    <br />
+    <h2>Grid Test View</h2>
+    <h3>Rows - 2D Array</h3>
+    <textarea id="arrayView2D" cols="30" rows="7" name="S1"></textarea>
+    <br />
+    <h2>Grid Test View</h2>
+    <h3>2 Indexes - Element</h3>
+    <textarea id="arrayViewCell" cols="30" rows="2"></textarea>
+    <br />
+    <br />
+    <button onclick="document.location='index.html'">Return</button>
+    <br />
+    <h3>Coded By Martin</h3>
+    <br />
+    <img src="images/logo.png" />
+    <br />
   </body>
 </html>
