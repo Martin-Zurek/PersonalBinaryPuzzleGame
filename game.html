@@ -31,6 +31,25 @@
         letter-spacing: 1px;
         text-shadow: 1.5px 1.5px 1.5px white;
       }
+      button {
+        background-color: rgba(0, 150, 0);
+        font-size: 15px;
+        text-align: center;
+        border: none;
+        color: white;
+        width: 150px;
+        padding: 15px 30px;
+        transition-duration: 0.2s;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      button:hover {
+        background-color: rgba(0, 200, 0);
+      }
+      button:active {
+        transform: translateY(5px);
+      }
       input {
         background-color: rgba(0, 150, 0);
         font-size: 15px;
@@ -662,18 +681,13 @@
     </script>
   </head>
   <body onload="loadGrid(G01)">
-    <form id="input">
       <h1>Binary Puzzle Game</h1>
       <h2>Game Page</h2>
       <br />
-      <input
-        id="Return"
-        type="Button"
-        value="Return"
-        onclick="document.location='index.html'"
-      />
-      <br />
-      <h3>Read the TUTORIAL before continuing!</h3>
+      <button onclick="document.location='index.html'">Return</button>
+      <br>
+      <h3>Pick A Game</h3>
+      <br>
       <select id="cboPuzNo" onchange="loadGrid(eval(value))" name="D1">
         <option value="G01">Game 1</option>
         <option value="G02">Game 2</option>
