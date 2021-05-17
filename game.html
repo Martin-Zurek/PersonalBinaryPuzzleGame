@@ -81,10 +81,10 @@
         border-collapse: collapse;
       }
       .gameboard {
-        width: 50px;
-        height: 50px;
-        font-size: 30px;
-        color: rgba(0, 0, 0);
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+        color: white;
         text-align: center;
         border-collapse: collapse;
         border-spacing: 0;
@@ -698,6 +698,7 @@
     <h2>Game Page</h2>
     <br />
     <h2>Pick A Game</h2>
+    <h3>Please pick one of the following options from the dropdown menu!</h3>
     <br />
     <select name="D1" id="dropdown" onchange="loadGrid(eval(value))">
       <option value="G01">Game 1</option>
@@ -716,7 +717,13 @@
       <option value="GT">Testing Game</option>
     </select>
     <br />
+    <h3>
+      The "Testing Game" is just a test run of the 6x6 grid, and does not
+      contain any functionality.
+    </h3>
+    <br />
     <h2>Pick A Button</h2>
+    <h3>Please pick one of the following buttons!</h3>
     <br />
     <input type="button" value="Solve Repeat" onclick="BinaryPuzzleSolver()" />
     <input type="button" value="Solve Once" onclick="SolvePuzzle()" />
@@ -726,7 +733,13 @@
     <input type="button" value="RowPairs" onclick="SolveRowPairs()" />
     <input type="button" value="ColPairs" onclick="SolveColPairs()" />
     <br />
+    <h3>
+      Some of the buttons may not work properly, because they have not been
+      coded yet. Sorry!
+    </h3>
+    <br />
     <h2>Puzzle Grid</h2>
+    <h3>6X6 Grid</h3>
     <br />
     <table class="gameboard">
       <tr>
