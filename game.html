@@ -50,6 +50,13 @@
       button:active {
         transform: translateY(5px);
       }
+      img {
+        width: 75px;
+        height: 75px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
       input {
         background-color: rgba(0, 150, 0);
         font-size: 15px;
@@ -95,6 +102,12 @@
         border-spacing: 0;
         border: 1px solid rgba(215, 215, 215);
         resize: none;
+        padding: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      select {
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -682,13 +695,12 @@
   </head>
   <body onload="loadGrid(G01)">
       <h1>Binary Puzzle Game</h1>
+      <img src="images/logo.png" />
       <h2>Game Page</h2>
-      <br />
-      <button onclick="document.location='index.html'">Return</button>
       <br>
       <h3>Pick A Game</h3>
       <br>
-      <select id="cboPuzNo" onchange="loadGrid(eval(value))" name="D1">
+      <select name="D1" id="dropdown" onchange="loadGrid(eval(value))">
         <option value="G01">Game 1</option>
         <option value="G02">Game 2</option>
         <option value="G03">Game 3</option>
@@ -705,6 +717,8 @@
         <option value="GT">Testing Game</option>
       </select>
       <br />
+      <h2>Pick A Button</h2>
+      <br>
       <input
         type="button"
         value="Solve Repeat"
@@ -854,6 +868,8 @@
       <h3>2 Indexes - Element</h3>
       <textarea id="arrayViewCell" cols="30" rows="2"></textarea>
       <br />
-    </form>
+      <br />
+      <button onclick="document.location='index.html'">Return</button>
+      <br>
   </body>
 </html>
